@@ -251,9 +251,21 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
-function getReviewByIndex(reviews, index) {
-  /* code here */
+
+function getReviewByIndex(a, b) {
+  let c = a[b];
+  return (
+    c["name"] +
+    " gave the restaurant a " +
+    c["rating"] +
+    ", and their feedback was: " +
+    c["feedback"]
+  );
 }
+
+const printNumReview = getReviewByIndex(reviews, 2);
+
+console.log(printNumReview);
 
 //
 //
@@ -316,9 +328,9 @@ function getLastReview(a) {
   );
 }
 
-const printReview = getLastReview(reviews);
+const printLastReview = getLastReview(reviews);
 
-console.log(printReview);
+console.log(printLastReview);
 
 //
 //
