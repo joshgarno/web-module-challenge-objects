@@ -136,6 +136,8 @@ const reviews = [
 
 /* Task 3: Console.log just Julius' feedback */
 
+console.log(reviews[5].feedback);
+
 //
 //
 //
