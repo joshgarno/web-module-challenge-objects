@@ -136,7 +136,7 @@ const reviews = [
 
 /* Task 3: Console.log just Julius' feedback */
 
-console.log(reviews[5].feedback);
+//console.log(reviews[5].feedback);
 
 //
 //
@@ -172,6 +172,13 @@ console.log(reviews[5].feedback);
 //
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+
+function addPlaces(array, name, rating, feedback) {
+  array.push({ name, rating, feedback });
+  return array;
+}
+
+addPlaces(reviews, "Josh", 1, "Dirty inside and outside.");
 
 //
 //
@@ -311,12 +318,6 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-
-// console.log(reviews[1]);
-
-// let b = reviews.length - 1;
-
-// console.log(aa);
 
 function getLastReview(a) {
   let b = a.length - 1;
