@@ -11,10 +11,27 @@ const breakfastBurrito = {
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category) {
-  /* Code here */
+  const newMenuItem = {};
+  newMenuItem.name = name;
+  newMenuItem.price = cost;
+  newMenuItem.category = category;
+  return newMenuItem;
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
+
+const shirleyTemple = createMenuItem("Shirley Temple", 4, "Drinks");
+
+const italianSoda = createMenuItem("Italian Soda", 4, "Drinks");
+
+const glacier = createMenuItem("Glacier", 4, "Drinks");
+
+console.log(latte);
+console.log(burger);
+console.log(breakfastBurrito);
+console.log(shirleyTemple);
+console.log(italianSoda);
+console.log(glacier);
 
 //
 //
@@ -274,7 +291,7 @@ function getReviewByIndex(a, b) {
 
 const printNumReview = getReviewByIndex(reviews, 2);
 
-console.log(printNumReview);
+//console.log(printNumReview);
 
 //
 //
@@ -333,7 +350,7 @@ function getLastReview(a) {
 
 const printLastReview = getLastReview(reviews);
 
-console.log(printLastReview);
+//console.log(printLastReview);
 
 //
 //
