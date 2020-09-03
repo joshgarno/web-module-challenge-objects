@@ -8,9 +8,9 @@ const burger = {
   discount: function (status) {
     let newPrice = 1;
     if (status === "teacher" || status === "student") {
-      newPrice = burger.price * 0.75;
+      newPrice = this.price * 0.75;
     } else {
-      newPrice = burger.price * 0.9;
+      newPrice = this.price * 0.9;
     }
     return newPrice;
   },
@@ -40,12 +40,12 @@ const italianSoda = createMenuItem("Italian Soda", 4, "Drinks");
 
 const glacier = createMenuItem("Glacier", 4, "Drinks");
 
-// console.log(latte);
-// console.log(burger);
-// console.log(breakfastBurrito);
-// console.log(shirleyTemple);
-// console.log(italianSoda);
-//console.log(glacier);
+console.log(latte);
+console.log(burger);
+console.log(breakfastBurrito);
+console.log(shirleyTemple);
+console.log(italianSoda);
+console.log(glacier);
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -53,11 +53,15 @@ Your method should accept:
 
 (1) A string (teacher, student, or public)
 
-and should return a number. 
+and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
 console.log(burger.discount("teacher"));
+
+console.log(burger.discount("student"));
+
+console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -101,75 +105,9 @@ const reviews = [
   { name: "Reyna", rating: 3.5, feedback: "" },
 ];
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 /* Task 3: Console.log just Julius' feedback */
 
-//console.log(reviews[5].feedback);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
@@ -180,73 +118,12 @@ function addPlaces(array, name, rating, feedback) {
 
 addPlaces(reviews, "Josh", 1, "Dirty inside and outside.");
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+reviews[7].feeback =
+  "this place is chill with really cool people, great for getting work done on weekdays";
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+console.log(reviews[7]);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -274,40 +151,7 @@ function getReviewByIndex(a, b) {
 
 const printNumReview = getReviewByIndex(reviews, 2);
 
-//console.log(printNumReview);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+console.log(printNumReview);
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
 
@@ -333,40 +177,7 @@ function getLastReview(a) {
 
 const printLastReview = getLastReview(reviews);
 
-//console.log(printLastReview);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+console.log(printLastReview);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
