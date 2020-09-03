@@ -1,7 +1,21 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = { name: "Cafe Latte", price: 4, category: "Drinks" };
-const burger = { name: "Burger", price: 18, category: "Lunch" };
+const burger = {
+  name: "Burger",
+  price: 18,
+  category: "Lunch",
+  discount: function (status) {
+    let newPrice = 1;
+    if (status === "teacher" || status === "student") {
+      newPrice = burger.price * 0.75;
+    } else {
+      newPrice = burger.price * 0.9;
+    }
+    return newPrice;
+  },
+};
+
 const breakfastBurrito = {
   name: "Breakfast Burrito",
   price: 16,
@@ -26,45 +40,12 @@ const italianSoda = createMenuItem("Italian Soda", 4, "Drinks");
 
 const glacier = createMenuItem("Glacier", 4, "Drinks");
 
-console.log(latte);
-console.log(burger);
-console.log(breakfastBurrito);
-console.log(shirleyTemple);
-console.log(italianSoda);
-console.log(glacier);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// console.log(latte);
+// console.log(burger);
+// console.log(breakfastBurrito);
+// console.log(shirleyTemple);
+// console.log(italianSoda);
+//console.log(glacier);
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
 
@@ -75,6 +56,8 @@ Your method should accept:
 and should return a number. 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+
+console.log(burger.discount("teacher"));
 
 ///////////////Reviews (MVP)///////////////////
 
